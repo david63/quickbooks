@@ -1,4 +1,4 @@
-# Language groups extension for phpBB
+# Quick Link Bookmarks extension for phpBB
 
 An extension to add bookmarks to the Quick Links menu.
 
