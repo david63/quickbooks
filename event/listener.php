@@ -14,6 +14,7 @@ namespace david63\quickbooks\event;
 */
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
+use phpbb\config\config;
 use phpbb\template\template;
 use phpbb\controller\helper;
 use david63\quickbooks\core\functions;
@@ -23,7 +24,10 @@ use david63\quickbooks\core\functions;
 */
 class listener implements EventSubscriberInterface
 {
-	/** @var \phpbb\template\template\template */
+	/** @var \phpbb\config\config*/
+	protected $config;
+
+	/** @var \phpbb\template\template */
 	protected $template;
 
 	/** @var \phpbb\controller\helper */
@@ -35,14 +39,16 @@ class listener implements EventSubscriberInterface
 	/**
 	* Constructor for listener
 	*
+	* @param \phpbb\config\config					$config				Config object
 	* @param \phpbb\template\template				$template			Template object
 	* @param \phpbb\controller\helper				$controller_helper	Controller helper object
 	* @param \david63\quickbooks\core\functions		$functions			Functions for the extension
 	*
 	* @access public
 	*/
-	public function __construct(template $template, helper $controller_helper, functions $functions)
+	public function __construct(config $config, template $template, helper $controller_helper, functions $functions)
 	{
+		$this->config				= $config;
 		$this->template				= $template;
 		$this->controller_helper	= $controller_helper;
 		$this->functions			= $functions;
@@ -90,7 +96,10 @@ class listener implements EventSubscriberInterface
 	*/
 	public function page_header($event)
 	{
-		$this->template->assign_var('U_QUICK_BOOKS', $this->controller_helper->route('david63_quickbooks_main_controller'));
+		if ($this->config['allow_bookmarks'])
+		{
+			$this->template->assign_var('U_QUICK_BOOKS', $this->controller_helper->route('david63_quickbooks_main_controller'));
+		}
 	}
 
 }
