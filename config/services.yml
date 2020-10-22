@@ -2,6 +2,7 @@ services:
     _defaults:
         autowire: true
         bind:
+            $config: '@config'
             $root_path: '%core.root_path%'
             $php_ext: '%core.php_ext%'
 
