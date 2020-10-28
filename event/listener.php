@@ -92,5 +92,4 @@ class listener implements EventSubscriberInterface
 	{
 		$this->template->assign_var('U_QUICK_BOOKS', $this->controller_helper->route('david63_quickbooks_main_controller'));
 	}
-
 }

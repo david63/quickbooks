@@ -23,8 +23,8 @@ class main_controller
 	/**
 	* Constructor for main controller
 	*
-	* @param string									$root_path			phpBB root path
-	* @param string									$php_ext			phpBB extension
+	* @param string		$root_path		phpBB root path
+	* @param string		$php_ext		phpBB extension
 	*
 	* @return \phpbb\quickbooks\controller\main_controller
 	* @access public
@@ -36,7 +36,7 @@ class main_controller
 	}
 
 	/**
-	* Display the options a user can configure for this extension
+	* Display the UCP bookmarks
 	*
 	* @return null
 	* @access public
