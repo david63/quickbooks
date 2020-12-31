@@ -2,11 +2,13 @@
 
 An extension to add bookmarks to the Quick Links menu.
 
-[![Build Status](https://travis-ci.com/david63/quickbooks.svg?branch=master)](https://travis-ci.com/david63/quickbooks)
+[![Build Status](https://github.com/david63/quickbooks/workflows/Tests/badge.svg)](https://github.com/phpbb-extensions/david63/quickbooks)
 [![License](https://poser.pugx.org/david63/quickbooks/license)](https://packagist.org/packages/david63/quickbooks)
 [![Latest Stable Version](https://poser.pugx.org/david63/quickbooks/v/stable)](https://packagist.org/packages/david63/quickbooks)
 [![Latest Unstable Version](https://poser.pugx.org/david63/quickbooks/v/unstable)](https://packagist.org/packages/david63/quickbooks)
 [![Total Downloads](https://poser.pugx.org/david63/quickbooks/downloads)](https://packagist.org/packages/david63/quickbooks)
+[![codecov](https://codecov.io/gh/david63/quickbooks/branch/master/graph/badge.svg?token=D2500PgRex)](https://codecov.io/gh/david63/quickbooks)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/59902be2665c476dbd7951858c9ff769)](https://www.codacy.com/manual/david63/quickbooks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=david63/quickbooks&amp;utm_campaign=Badge_Grade)
 
 ## Minimum Requirements
   * phpBB 3.3.0
